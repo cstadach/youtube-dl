@@ -11,9 +11,10 @@ before_install:
 script: nosetests test --verbose
 notifications:
   email:
-    - filippo.valsorda@gmail.com
-    - phihag@phihag.de
-    - yasoob.khld@gmail.com
+    - hannu.lintala@gmail.com
+#    - filippo.valsorda@gmail.com
+#    - phihag@phihag.de
+#    - yasoob.khld@gmail.com
 #  irc:
 #    channels:
 #      - "irc.freenode.org#youtube-dl"
