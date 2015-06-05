@@ -642,6 +642,7 @@ from .twentytwotracks import (
     TwentyTwoTracksIE,
     TwentyTwoTracksGenreIE
 )
+from .twit import TwitIE
 from .twitch import (
     TwitchVideoIE,
     TwitchChapterIE,
