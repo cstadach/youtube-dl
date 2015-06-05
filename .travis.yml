@@ -5,10 +5,13 @@ python:
   - "3.2"
   - "3.3"
   - "3.4"
+env:
+  - EXCLUDE_TESTS="test_[O-Z].*"
+  - EXCLUDE_TESTS="test_[a-ce-zA-N].*"
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -yqq rtmpdump
-script: nosetests test --verbose
+script: nosetests -e $EXCLUDE_TESTS test --verbose
 notifications:
   email:
     - filippo.valsorda@gmail.com
