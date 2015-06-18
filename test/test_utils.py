@@ -230,6 +230,9 @@ class TestUtil(unittest.TestCase):
         self.assertEqual(unified_strdate('25-09-2014'), '20140925')
         for day_str in ['6th', '21st', '22nd', '23rd', '24th']:
             self.assertEqual(
+                unified_strdate('Sep %s 2014' % day_str),
+                '201409%.2d' % int(day_str[:-2]))
+            self.assertEqual(
                 unified_strdate('Sep %s 2014 05:10PM' % day_str),
                 '201409%.2d' % int(day_str[:-2]))
 
