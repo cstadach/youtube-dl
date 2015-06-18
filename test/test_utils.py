@@ -228,6 +228,10 @@ class TestUtil(unittest.TestCase):
             unified_strdate('2/2/2015 6:47:40 PM', day_first=False),
             '20150202')
         self.assertEqual(unified_strdate('25-09-2014'), '20140925')
+        for day_str in ['6th', '21st', '22nd', '23rd', '24th']:
+            self.assertEqual(
+                unified_strdate('Sep %s 2014 05:10PM' % day_str),
+                '201409%.2d' % int(day_str[:-2]))
 
     def test_find_xpath_attr(self):
         testxml = '''<root>
